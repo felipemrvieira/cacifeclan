@@ -1,0 +1,112 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass";
+
+@mixin float(){
+  float: left;
+  -webkit-animation-name: Floatingx;
+  -webkit-animation-duration: 15s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-name: Floating;
+  -moz-animation-duration: 15s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes Floatingx{
+  from {-webkit-transform:translate(0, 0px);}
+  65% {-webkit-transform:translate(60px, 10px);}
+  to {-webkit-transform: translate(0px, 0px);    }
+}
+
+@-moz-keyframes Floating{
+ from {-moz-transform:translate(0, 0px);}
+ 65% {-moz-transform:translate(60px, 10px);}
+ to {-moz-transform: translate(0px, 0px);}
+}
+
+@mixin float2(){
+  float: right;
+  -webkit-animation-name: Floatingx2;
+  -webkit-animation-duration: 18s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-name: Floating2;
+  -moz-animation-duration: 18s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes Floatingx2{
+  from {-webkit-transform:translate(0, 0px);}
+  50% {-webkit-transform:translate(-60px, -30px);}
+  to {-webkit-transform: translate(0px, 0px);    }
+}
+
+@-moz-keyframes Floating2{
+ from {-moz-transform:translate(0, 0px);}
+ 50% {-moz-transform:translate(-60px, -30px);}
+ to {-moz-transform: translate(0px, 0px);}
+}
+
+$azul-escuro: #12161a;
+$azul-escuro2: #0f1e26;
+
+body{
+
+  .teste{
+    -webkit-animation-duration: 3s;
+    -webkit-animation-delay: 3s;
+
+    -moz-animation-duration: 3s;
+    -moz-animation-delay: 3s;
+  }
+
+  #background{
+    overflow: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+
+    #scene{
+      align-self: center;
+      margin-top: 50px;
+      z-index: 10;
+      
+      -webkit-animation-duration: 3s;
+      -webkit-animation-delay: 3s;
+
+      -moz-animation-duration: 3s;
+      -moz-animation-delay: 3s;
+
+    }
+
+
+    #cloud1{
+      @include float();
+      position: absolute;
+      left: 540px;
+    }
+    #cloud2{
+      @include float2();
+      position: absolute;
+      left: -400px;
+      top:100px;
+    }
+
+    background-color: $azul-escuro; // Old browsers
+    @include filter-gradient($azul-escuro, $azul-escuro2, horizontal); // IE6-9 fallback on horizontal gradient
+    @include background-image(linear-gradient(left bottom, $azul-escuro 0%,$azul-escuro2 100%));
+    background-color: $azul-escuro2;
+  }
+}
