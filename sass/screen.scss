@@ -1,7 +1,7 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@font-face {
+    font-family: 'gloss';
+    src: url('../fonts/gloss.ttf') format('truetype');
+  }
 
 @import "compass/reset";
 @import "compass";
@@ -78,11 +78,17 @@ body{
     display: flex;
     flex-direction: column;
 
+
+    background-color: $azul-escuro; // Old browsers
+    @include filter-gradient($azul-escuro, $azul-escuro2, horizontal); // IE6-9 fallback on horizontal gradient
+    @include background-image(linear-gradient(left bottom, $azul-escuro 0%,$azul-escuro2 100%));
+    background-color: $azul-escuro2;
+
     #scene{
       align-self: center;
       margin-top: 50px;
       z-index: 10;
-      
+
       -webkit-animation-duration: 3s;
       -webkit-animation-delay: 3s;
 
@@ -90,7 +96,6 @@ body{
       -moz-animation-delay: 3s;
 
     }
-
 
     #cloud1{
       @include float();
@@ -104,9 +109,16 @@ body{
       top:100px;
     }
 
-    background-color: $azul-escuro; // Old browsers
-    @include filter-gradient($azul-escuro, $azul-escuro2, horizontal); // IE6-9 fallback on horizontal gradient
-    @include background-image(linear-gradient(left bottom, $azul-escuro 0%,$azul-escuro2 100%));
-    background-color: $azul-escuro2;
+    .rodape{
+      z-index: 10;
+      text-align: center;
+      padding: 32px;
+      font-family: gloss;
+      color: white;
+      font-size: 62px;
+      a{
+        color: white;
+      }
+    }
   }
 }

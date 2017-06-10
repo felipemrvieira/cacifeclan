@@ -1,7 +1,7 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@font-face {
+  font-family: 'gloss';
+  src: url("../fonts/gloss.ttf") format("truetype");
+}
 /* line 5, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -139,7 +139,7 @@ body #background {
   background-image: linear-gradient(to right top, #12161a 0%, #0f1e26 100%);
   background-color: #0f1e26;
 }
-/* line 81, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
 body #background #scene {
   align-self: center;
   margin-top: 50px;
@@ -149,7 +149,7 @@ body #background #scene {
   -moz-animation-duration: 3s;
   -moz-animation-delay: 3s;
 }
-/* line 95, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 body #background #cloud1 {
   float: left;
   -webkit-animation-name: Floatingx;
@@ -163,7 +163,7 @@ body #background #cloud1 {
   position: absolute;
   left: 540px;
 }
-/* line 100, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 body #background #cloud2 {
   float: right;
   -webkit-animation-name: Floatingx2;
@@ -177,4 +177,17 @@ body #background #cloud2 {
   position: absolute;
   left: -400px;
   top: 100px;
+}
+/* line 112, ../sass/screen.scss */
+body #background .rodape {
+  z-index: 10;
+  text-align: center;
+  padding: 32px;
+  font-family: gloss;
+  color: white;
+  font-size: 62px;
+}
+/* line 119, ../sass/screen.scss */
+body #background .rodape a {
+  color: white;
 }
