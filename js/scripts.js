@@ -1,30 +1,44 @@
 $( document ).ready(function() {
-  // var scene = document.getElementById('scene');
-  // var parallax = new Parallax(scene);
 
   var controller = new ScrollMagic.Controller();
-  var cena = new ScrollMagic.Scene({
+
+
+  var scene = new ScrollMagic.Scene({
     triggerElement: "#logo-cacife",
-    duration: "60%"
+    duration: 400,
+    triggerHook: 0.2
   })
-  .setClassToggle("#logo-cacife", "aparece")
-  .addIndicators()
-  .addTo(controller);
+	.setPin("#logo-cacife")
+	// .addIndicators({name: "Pin Logo Cacife"})
+	.addTo(controller);
 
 
+  var scene2 = new ScrollMagic.Scene({
+    triggerElement: "#logo-cacife",
+    triggerHook: 0.5
+  })
+	// .addIndicators({name: "Mostra Logo Cacife"})
+  .setVelocity("#logo-cacife", {opacity: 1}, {duration: 600})
+	.addTo(controller);
 
 
+  var scene3 = new ScrollMagic.Scene({
+    triggerElement: "#logo-medellin",
+    duration: 400,
+    triggerHook: 0.2
+  })
+	.setPin("#logo-medellin")
+	// .addIndicators({name: "Pin Logo medellin"})
+	.addTo(controller);
 
 
-  // var exibe = "$('#logo-cacife').removeClass( 'fadeIn' ).addClass( 'fadeOut' )";
-  // setTimeout(exibe, 6000);
-  // var exibe2 = "$('#logo-starfish').removeClass( 'esconde' ).addClass( 'fadeIn' )";
-  // setTimeout(exibe2, 9000);
-  //exibeMenu();
+  var scene4 = new ScrollMagic.Scene({
+    triggerElement: "#felp22",
+    triggerHook: 0.2
+  })
+	.setPin("#felp22")
+	.addIndicators({name: "Pin felp22"})
+	.addTo(controller);
+
+
 });
-
-// function exibeMenu() {
-//   var exibe = "$('#menu').removeClass( 'esconde' ).addClass( 'animated fadeIn' )";
-//   setTimeout(exibe, 6000);
-//
-// }

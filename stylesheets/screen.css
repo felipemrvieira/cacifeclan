@@ -139,25 +139,37 @@ body #background {
 }
 /* line 81, ../sass/screen.scss */
 body #background .intro {
-  height: 600px;
+  height: 500px;
 }
 /* line 85, ../sass/screen.scss */
 body #background #logo-cacife {
   align-self: center;
-  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 50px;
   z-index: 10;
   opacity: 0;
-  transition: all 2s ease-out;
 }
-/* line 102, ../sass/screen.scss */
+/* line 93, ../sass/screen.scss */
+body #background #logo-medellin {
+  align-self: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+/* line 99, ../sass/screen.scss */
+body #background #felp22 {
+  align-self: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+/* line 105, ../sass/screen.scss */
 body #background #logo-cacife.aparece {
   opacity: 1;
 }
-/* line 108, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 body #background #clouds {
   position: fixed;
 }
-/* line 110, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 body #background #clouds #cloud1 {
   float: left;
   -webkit-animation-name: Floatingx;
@@ -171,7 +183,7 @@ body #background #clouds #cloud1 {
   position: absolute;
   left: 540px;
 }
-/* line 115, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
 body #background #clouds #cloud2 {
   float: right;
   -webkit-animation-name: Floatingx2;
@@ -186,7 +198,7 @@ body #background #clouds #cloud2 {
   left: -400px;
   top: 100px;
 }
-/* line 124, ../sass/screen.scss */
+/* line 127, ../sass/screen.scss */
 body #background .rodape {
   z-index: 10;
   text-align: center;
@@ -195,7 +207,7 @@ body #background .rodape {
   color: white;
   font-size: 62px;
 }
-/* line 131, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 body #background .rodape a {
   color: white;
 }

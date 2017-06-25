@@ -79,24 +79,27 @@ body{
     background-color: $azul-escuro2;
 
     .intro{
-      height: 600px;
+      height: 500px;
     }
 
     #logo-cacife{
-      // position: fixed;
       align-self: center;
-      margin-top: 50px;
+      text-align: center;
+      margin-bottom: 50px;
       z-index: 10;
       opacity: 0;
-      transition: all 2s ease-out;
+    }
 
-      // -webkit-animation-duration: 3s;
-      // -webkit-animation-delay: 3s;
-      //
-      // -moz-animation-duration: 3s;
-      // -moz-animation-delay: 3s;
+    #logo-medellin{
+      align-self: center;
+      text-align: center;
+      margin-bottom: 50px;
+    }
 
-
+    #felp22{
+      align-self: center;
+      text-align: center;
+      margin-bottom: 50px;
     }
 
     #logo-cacife.aparece{
